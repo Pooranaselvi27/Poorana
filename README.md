@@ -56,7 +56,21 @@ function App() {
           filteredProducts.map(product => (
             <div className="product-card" key={product.id}>
               <img src={product.image} alt={product.name} />
-              <h.App {
+              <h3>{product.name}</h3>
+              <p>{product.category}</p>
+            </div>
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+App.CSS
+.App {
   text-align: center;
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -123,4 +137,4 @@ h1 {
   height: 150px;
   object-fit: contain;
   border-radius: 10px;
-
+}
